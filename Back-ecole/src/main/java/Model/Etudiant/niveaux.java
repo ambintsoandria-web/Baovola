@@ -2,21 +2,21 @@ package Model.Etudiant;
 
 import java.time.LocalDateTime;
 
-public class matieres {
+public class niveaux {
     private Integer id;
     private Integer etablissementId;
-    private String nom;
-    private String code;
+    private String libelle;
+    private Integer ordre;
     private LocalDateTime createdAt;
 
-    public matieres() {
+    public niveaux() {
     }
 
-    public matieres(Integer id, Integer etablissementId, String nom, String code, LocalDateTime createdAt) {
+    public niveaux(Integer id, Integer etablissementId, String libelle, Integer ordre, LocalDateTime createdAt) {
         this.id = id;
         this.etablissementId = etablissementId;
-        this.nom = nom;
-        this.code = code;
+        this.libelle = libelle;
+        this.ordre = ordre;
         this.createdAt = createdAt;
     }
 
@@ -36,20 +36,20 @@ public class matieres {
         this.etablissementId = etablissementId;
     }
 
-    public String getNom() {
-        return nom;
+    public String getLibelle() {
+        return libelle;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
     }
 
-    public String getCode() {
-        return code;
+    public Integer getOrdre() {
+        return ordre;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setOrdre(Integer ordre) {
+        this.ordre = ordre;
     }
 
     public LocalDateTime getCreatedAt() {

@@ -2,21 +2,25 @@ package Model.Etudiant;
 
 import java.time.LocalDateTime;
 
-public class matieres {
+public class salles {
     private Integer id;
     private Integer etablissementId;
     private String nom;
-    private String code;
+    private Integer capacite;
+    private String type;
+    private Boolean active;
     private LocalDateTime createdAt;
 
-    public matieres() {
+    public salles() {
     }
 
-    public matieres(Integer id, Integer etablissementId, String nom, String code, LocalDateTime createdAt) {
+    public salles(Integer id, Integer etablissementId, String nom, Integer capacite, String type, Boolean active, LocalDateTime createdAt) {
         this.id = id;
         this.etablissementId = etablissementId;
         this.nom = nom;
-        this.code = code;
+        this.capacite = capacite;
+        this.type = type;
+        this.active = active;
         this.createdAt = createdAt;
     }
 
@@ -44,12 +48,28 @@ public class matieres {
         this.nom = nom;
     }
 
-    public String getCode() {
-        return code;
+    public Integer getCapacite() {
+        return capacite;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setCapacite(Integer capacite) {
+        this.capacite = capacite;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public LocalDateTime getCreatedAt() {

@@ -3,7 +3,7 @@ package Model.Etudiant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class profils_etudiants {
+public class profils_professeurs {
     private Integer id;
     private Integer userId;
     private Users user;
@@ -11,26 +11,25 @@ public class profils_etudiants {
     private String nom;
     private String prenom;
     private LocalDate dateNaissance;
-    private String lieuNaissance;
     private String sexe;
     private String photoUrl;
-    private String adresse;
-    private String commune;
-    private String region;
-    private String nationalite;
-    private String cin;
     private String telephone;
+    private String adresse;
+    private String specialite;
+    private String typeContrat;
+    private LocalDate dateDebutContrat;
+    private LocalDate dateFinContrat;
     private Boolean archived;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public profils_etudiants() {
+    public profils_professeurs() {
     }
 
-    public profils_etudiants(Integer id, Integer userId, Users user, String matricule, String nom, String prenom,
-                             LocalDate dateNaissance, String lieuNaissance, String sexe, String photoUrl,
-                             String adresse, String commune, String region, String nationalite, String cin,
-                             String telephone, Boolean archived, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public profils_professeurs(Integer id, Integer userId, Users user, String matricule, String nom, String prenom,
+                               LocalDate dateNaissance, String sexe, String photoUrl, String telephone,
+                               String adresse, String specialite, String typeContrat, LocalDate dateDebutContrat,
+                               LocalDate dateFinContrat, Boolean archived, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.userId = userId;
         this.user = user;
@@ -38,15 +37,14 @@ public class profils_etudiants {
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
-        this.lieuNaissance = lieuNaissance;
         this.sexe = sexe;
         this.photoUrl = photoUrl;
-        this.adresse = adresse;
-        this.commune = commune;
-        this.region = region;
-        this.nationalite = nationalite;
-        this.cin = cin;
         this.telephone = telephone;
+        this.adresse = adresse;
+        this.specialite = specialite;
+        this.typeContrat = typeContrat;
+        this.dateDebutContrat = dateDebutContrat;
+        this.dateFinContrat = dateFinContrat;
         this.archived = archived;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
@@ -108,14 +106,6 @@ public class profils_etudiants {
         this.dateNaissance = dateNaissance;
     }
 
-    public String getLieuNaissance() {
-        return lieuNaissance;
-    }
-
-    public void setLieuNaissance(String lieuNaissance) {
-        this.lieuNaissance = lieuNaissance;
-    }
-
     public String getSexe() {
         return sexe;
     }
@@ -132,6 +122,14 @@ public class profils_etudiants {
         this.photoUrl = photoUrl;
     }
 
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
     public String getAdresse() {
         return adresse;
     }
@@ -140,44 +138,36 @@ public class profils_etudiants {
         this.adresse = adresse;
     }
 
-    public String getCommune() {
-        return commune;
+    public String getSpecialite() {
+        return specialite;
     }
 
-    public void setCommune(String commune) {
-        this.commune = commune;
+    public void setSpecialite(String specialite) {
+        this.specialite = specialite;
     }
 
-    public String getRegion() {
-        return region;
+    public String getTypeContrat() {
+        return typeContrat;
     }
 
-    public void setRegion(String region) {
-        this.region = region;
+    public void setTypeContrat(String typeContrat) {
+        this.typeContrat = typeContrat;
     }
 
-    public String getNationalite() {
-        return nationalite;
+    public LocalDate getDateDebutContrat() {
+        return dateDebutContrat;
     }
 
-    public void setNationalite(String nationalite) {
-        this.nationalite = nationalite;
+    public void setDateDebutContrat(LocalDate dateDebutContrat) {
+        this.dateDebutContrat = dateDebutContrat;
     }
 
-    public String getCin() {
-        return cin;
+    public LocalDate getDateFinContrat() {
+        return dateFinContrat;
     }
 
-    public void setCin(String cin) {
-        this.cin = cin;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
+    public void setDateFinContrat(LocalDate dateFinContrat) {
+        this.dateFinContrat = dateFinContrat;
     }
 
     public Boolean getArchived() {
